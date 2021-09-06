@@ -15,8 +15,10 @@
 ###< symfony/phpunit-bridge ###
 
 ###> phpunit/phpunit ###
-/phpunit.xml
-.phpunit.result.cache
+
+#/phpunit.xml
+#.phpunit.result.cache
+
 ###< phpunit/phpunit ###
 
 ###> symfony/webpack-encore-bundle ###
@@ -25,3 +27,8 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+###> symfony/webpack-encore-bundle ###
+
+!/public/build/
+!/public/build/*

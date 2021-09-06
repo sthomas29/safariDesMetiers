@@ -11,15 +11,15 @@
     {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
     {% block stylesheets %}
-{#        {{ encore_entry_link_tags('app') }}#}
+        {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
     {% block javascripts %}
-      {#  {{ encore_entry_script_tags('app') }}#}
+        {{ encore_entry_script_tags('app') }}
     {% endblock %}
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
