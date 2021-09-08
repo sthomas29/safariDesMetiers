@@ -38,6 +38,8 @@ class RegimeController extends AbstractController
         $regime = new RegimeAlimentaire();
         $form = $this->createForm(RegimeAlimentaireType::class, $regime);
 
+        dump ($request);
+
         $form->handleRequest($request);
         if ($request->isMethod('post') && $form->isSubmitted()) {
 
