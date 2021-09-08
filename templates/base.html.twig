@@ -20,6 +20,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -42,6 +43,7 @@
 </head>
 <body>
 <header>
+    {%  if block('navBar') is defined %}
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Carousel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -51,14 +53,20 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="/admin">Admin</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/profil">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Deconnexion</a>
+                </li>
+<!--                <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+                </li> -->
             </ul>
             <form class="form-inline mt-2 mt-md-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -66,6 +74,7 @@
             </form>
         </div>
     </nav>
+    {% endif %}
 </header>
 
 <main role="main">
@@ -140,10 +149,12 @@
     </div><!-- /.container -->
 
     <!-- FOOTER -->
+    {% if block('footer') is defined %}
     <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>
         <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
     </footer>
+    {%  endif %}
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
