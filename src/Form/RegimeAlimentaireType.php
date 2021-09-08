@@ -2,28 +2,29 @@
 
 namespace App\Form;
 
-use App\Entity\User;
+use App\Entity\RegimeAlimentaire;
 use Symfony\Component\Form\AbstractType;
+
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class RegisterType extends AbstractType
+class RegimeAlimentaireType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email')
-           // ->add('roles')
-            ->add('password')
+            ->add('nom')
+            ->add('description')
             ->add('Valider', SubmitType::class);
-        ;
+      //  ->getForm();
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => User::class,
+            'data_class' => RegimeAlimentaire::class,
         ]);
     }
 }
