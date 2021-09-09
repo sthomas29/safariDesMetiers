@@ -4,6 +4,7 @@
 
 {% block body %}
     {% block content %}
+        <div class="login-form-group">
         <form method="post">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -15,17 +16,18 @@
                 </div>
             {% endif %}
 
-            <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
-            <label for="inputEmail">Email</label>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control"
+            <h1 class="h3 mt-3 mb-3 font-weight-normal">Atelier Développement</h1>
+
+            <fieldset>
+            <label class="login-form" for="inputEmail">Email</label>
+
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="login-form form-control"
                    autocomplete="email" required autofocus>
             <label for="inputPassword">Password</label>
-            <input type="password" name="password" id="inputPassword" class="form-control"
+            <input type="password" name="password" id="inputPassword" class="login-form form-control"
                    autocomplete="current-password" required>
 
-            <input type="hidden" name="_csrf_token"
-                   value="{{ csrf_token('authenticate') }}"
-            >
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
             {#
             Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -36,8 +38,14 @@
                     <input type="checkbox" name="_remember_me"> Remember me
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary" type="submit">Se connecter</button>
-            <a href="/inscription" class="btn btn-lg btn-danger">Inscription</a>
+            <div id="btnGroup">
+                <button class="btn btn-sm " type="submit">Se connecter</button>
+                <a href="/inscription" class="btn btn-sm ">Inscription</a>
+            </div>
+            </fieldset>
         </form>
+        </div>
     {% endblock %}
 {% endblock %}
+
+{% block footer %}{% endblock %}

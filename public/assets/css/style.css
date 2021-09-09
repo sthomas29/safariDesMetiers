@@ -1,4 +1,97 @@
-loginForm{
+body {
+    /*
+    background-color: #ba8b00;
+    */
+    background-color: #856404;
+}
+
+
+loginForm {
     margin-top: 30px;
     background-color: #0f6674;
+}
+
+* {
+    color: navajowhite;
+}
+
+H1 {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+#logo {
+    width: auto;
+    height: 150px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-bandeau {
+    display: none;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+#btnGroup {
+    text-align: center;
+}
+
+#btnGroup > .btn {
+    background-color: #533f03;
+    color: lightgoldenrodyellow;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.login-form{
+    /*
+    background-color: #0f6674;
+    */
+}
+#myCarousel{
+    display: none;
+}
+
+@media all and (min-width: 400px) {
+
+    #myCarousel{
+        display: block;
+    }
+
+    .login-form-group{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+    }
+    .login-form-group > form > fieldset{
+        width: 20em;
+    }
+
+    #img-bandeau {
+        display: block;
+        width: auto;
+        height: 150px;
+    }
+    .bandeau{
+        background-image:url("../img/bandeau2.jpg");
+    }
 }

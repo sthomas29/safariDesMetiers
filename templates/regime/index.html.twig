@@ -10,11 +10,16 @@
 
 
     {% block content %}
-        {{ form_start(form) }}
+
+        {% for regime in list %}
+            <li>{{ regime.nom|e }} / {{ regime.description|e }}</li>
+        {% endfor %}
+
+{#        {{ form_start(form) }}
         {{ form_row(form.nom) }}
         {{ form_row(form.description) }}
 
         <button type="submit">Enregistrer !</button>
-        {{ form_end(form)}}
+        {{ form_end(form)}}#}
     {% endblock %}
 {% endblock %}
