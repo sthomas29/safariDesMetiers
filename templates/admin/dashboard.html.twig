@@ -4,7 +4,44 @@
 
 {% block body %}
     {% block content %}
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark ">
+                {# bg-dark #}
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/utilisateurs">Utilisateurs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/animaux">Animaux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/regimes">Régimes Alimentaires</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/familles">Familles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Deconnexion</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 ADMIN PAGE
+
+        {{ app.user.email }}
     {% endblock %}
 {% endblock %}
 

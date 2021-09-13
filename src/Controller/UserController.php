@@ -34,4 +34,14 @@ class UserController extends AbstractController
             'form'=> $form->createView(),
         ]);
     }
+
+    #[Route('/profil', name:'profil-Home')]
+    public function profile(){
+
+
+        return $this->render('user/profil/index.html.twig', [
+            'controller_name' => 'UserController',
+
+        ]);
+    }
 }

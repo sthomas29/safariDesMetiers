@@ -56,6 +56,16 @@ class Animal
      */
     private $predateurs;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $Description;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $LienWiki;
+
     public function __construct()
     {
         $this->predateurs = new ArrayCollection();
@@ -158,6 +168,30 @@ class Animal
     public function removePredateur(self $predateur): self
     {
         $this->predateurs->removeElement($predateur);
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->Description;
+    }
+
+    public function setDescription(?string $Description): self
+    {
+        $this->Description = $Description;
+
+        return $this;
+    }
+
+    public function getLienWiki(): ?string
+    {
+        return $this->LienWiki;
+    }
+
+    public function setLienWiki(?string $LienWiki): self
+    {
+        $this->LienWiki = $LienWiki;
 
         return $this;
     }

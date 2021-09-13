@@ -1,24 +1,23 @@
 /******************* STRUCTURE DE BASE *************************/
 * {
     color: navajowhite;
+
 }
 
 body {
-    /*position: absolute;*/
     top: 0;
     left: 0;
-    /*height: 100%;*/
-    /*width: 100%;*/
 
     padding-top: 0px;
-    /*
-    background-color: #ba8b00;
-    */
     background-color: #856404;
 }
 
-header{
+header {
+    /*background-color: #0d5e42;*/
+}
 
+main {
+    /*background-color: indianred;*/
 }
 
 footer {
@@ -36,6 +35,7 @@ H1 {
     text-align: center;
     display: block;
 }
+
 /******************* STRUCTURE DE BASE **************************/
 
 
@@ -47,7 +47,6 @@ loginForm {
 
 .login-form {
 }
-
 
 
 /******************* BANDEAU *************************************/
@@ -82,6 +81,7 @@ loginForm {
     margin-right: auto;
     width: 8em;
 }
+
 /***************** CARROUSEL ************************/
 
 
@@ -89,21 +89,42 @@ loginForm {
     display: none;
 }
 
- .bd-placeholder-img {
-     font-size: 1.125rem;
-     text-anchor: middle;
-     -webkit-user-select: none;
-     -moz-user-select: none;
-     -ms-user-select: none;
-     user-select: none;
- }
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*****************   CARDS  ***********************/
+.twoLines .card-text{
+    background-color: #0d5e42;
+    height:30px;
+    line-height:15px;
+    overflow:hidden;
+}
 
 @media all and (min-width: 400px) {
 
+    .bandeau {
+        /*position: absolute;*/
+        left:0;
+        width: 100%;
+        height: 180px;
+        background-image: url("../img/bandeau4.jpg");
+    }
+
     #logo {
-        text-align: right;
-        position: relative;
-        right: 0;
+        float: right;
+
+
+    }
+
+    nav {
+        /*position:relative;*/
+        /*float: none;*/
     }
 
     #myCarousel {
@@ -122,20 +143,12 @@ loginForm {
         width: 20em;
     }
 
-    #img-bandeau {
-        display: block;
-        width: auto;
-        height: 150px;
-    }
-
-    .bandeau {
-        background-image: url("../img/bandeau2.jpg");
-    }
 }
-
 
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
     }
+
+
 }

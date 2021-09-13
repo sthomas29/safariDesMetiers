@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Profil{% endblock %}
+
+{% block body %}
+    {% block navBar %}{% endblock %}
+    {% block content %}
+Mon Profil
+
+        {{ app.user.email }}
+    {% endblock %}
+{% endblock %}
+
+{% block footer %}{% endblock %}
