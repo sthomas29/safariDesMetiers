@@ -1,18 +1,32 @@
+/******************* STRUCTURE DE BASE *************************/
+* {
+    color: navajowhite;
+}
+
 body {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    /*height: 100%;*/
+    /*width: 100%;*/
+
+    padding-top: 0px;
     /*
     background-color: #ba8b00;
     */
     background-color: #856404;
 }
 
+header{
 
-loginForm {
-    margin-top: 30px;
-    background-color: #0f6674;
 }
 
-* {
-    color: navajowhite;
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 H1 {
@@ -22,7 +36,21 @@ H1 {
     text-align: center;
     display: block;
 }
+/******************* STRUCTURE DE BASE **************************/
 
+
+/******************* FORMULAIRES ********************************/
+loginForm {
+    margin-top: 30px;
+    background-color: #0f6674;
+}
+
+.login-form {
+}
+
+
+
+/******************* BANDEAU *************************************/
 #logo {
     width: auto;
     height: 150px;
@@ -36,8 +64,11 @@ H1 {
     display: none;
 }
 
+
+/***************** BOUTONS ************************/
 .btn {
     margin-bottom: 5px;
+    margin-right: 25px;
 }
 
 #btnGroup {
@@ -51,38 +82,43 @@ H1 {
     margin-right: auto;
     width: 8em;
 }
+/***************** CARROUSEL ************************/
 
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
 
-.login-form{
-    /*
-    background-color: #0f6674;
-    */
-}
-#myCarousel{
+#myCarousel {
     display: none;
 }
 
+ .bd-placeholder-img {
+     font-size: 1.125rem;
+     text-anchor: middle;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+
 @media all and (min-width: 400px) {
 
-    #myCarousel{
+    #logo {
+        text-align: right;
+        position: relative;
+        right: 0;
+    }
+
+    #myCarousel {
         display: block;
     }
 
-    .login-form-group{
+    .login-form-group {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
 
     }
-    .login-form-group > form > fieldset{
+
+    .login-form-group > form > fieldset {
         width: 20em;
     }
 
@@ -91,7 +127,15 @@ footer{
         width: auto;
         height: 150px;
     }
-    .bandeau{
-        background-image:url("../img/bandeau2.jpg");
+
+    .bandeau {
+        background-image: url("../img/bandeau2.jpg");
+    }
+}
+
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
     }
 }

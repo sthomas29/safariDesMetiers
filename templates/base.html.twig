@@ -20,24 +20,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="{{ asset('assets/css/carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
@@ -45,12 +28,14 @@
 <body>
 <header>
     <div class="bandeau">
-        <img id="logo" src="https://safaridesmetiers.tech/wp-content/uploads/2021/07/Logo-Safari-2021.png" alt="Logo Safari des Métiers 2021">
+{#        <img id="logo" src="https://safaridesmetiers.tech/wp-content/uploads/2021/07/Logo-Safari-2021.png" alt="Logo Safari des Métiers 2021">#}
+        <img id="logo" src="{{ asset('assets/img/Logo-Safari-2021.png') }}" alt="Logo Safari des Métiers 2021">
         {#<img id="img-bandeau" src={{ asset('assets/img/bandeau2.jpg') }}>#}
     </div>
 
     {%  if block('navBar') is defined %}
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark ">
+{#            bg-dark#}
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,9 +66,6 @@
         </div>
     </nav>
     {% endif %}
-
-
-
 </header>
 
 <main role="main">
