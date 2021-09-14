@@ -41,11 +41,19 @@ H1 {
 
 /******************* FORMULAIRES ********************************/
 loginForm {
+    padding-top: 1rem;
     margin-top: 30px;
     background-color: #0f6674;
 }
 
-.login-form {
+.login-form-group {
+
+}
+
+fieldset{
+    padding-top: 1rem;
+    width: 100%;
+    margin: auto;
 }
 
 
