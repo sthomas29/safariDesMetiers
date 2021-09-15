@@ -3,14 +3,14 @@
 }
 
 body {
-    background-color: #f1f1f1;
-    padding: 20px;
+    /*background-color: #f1f1f1;*/
+    /*padding: 20px;*/
 }
 
-header {
-    background-color: beige;
-    margin-bottom: 10px;
-}
+/*header {*/
+/*    background-color: beige;*/
+/*    margin-bottom: 10px;*/
+/*}*/
 
 .main img {
     max-height: 200px;
@@ -38,121 +38,122 @@ header img {
 
 /* Create three equal cartes that floats next to each other */
 
-.carte {
-    display: none;
-}
+/*.carte {*/
+/*    display: none;*/
+/*}*/
 
 
 /* Content */
 
-.content {
-    background-color: white;
-    padding: 10px;
-}
+/*.content {*/
+/*    background-color: white;*/
+/*    padding: 10px;*/
+/*}*/
 
 
 /* The "show" class is added to the filtered elements */
 
-.show {
-    display: block;
-}
+/*.show {*/
+/*    display: block;*/
+/*}*/
 
 
 /* Style the buttons */
 
-.btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: white;
-    cursor: pointer;
-}
+/*.btn {*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    padding: 12px 16px;*/
+/*    background-color: white;*/
+/*    cursor: pointer;*/
+
+/*}*/
 
 
 /* Add a grey background color on mouse-over */
 
-.btn:hover {
-    background-color: #ddd;
-}
+/*.btn:hover {*/
+/*    background-color: #ddd;*/
+/*}*/
 
 
 /* Add a dark background color to the active button */
 
-.btn.active {
-    background-color: #666;
-    color: white;
-}
+/*.btn.active {*/
+/*    background-color: #666;*/
+/*    color: white;*/
+/*}*/
 
-img:hover {
-    cursor: pointer;
-    border-radius: 50px;
-    transform: scale(1.2);
-    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
+/*img:hover {*/
+/*    cursor: pointer;*/
+/*    border-radius: 50px;*/
+/*    transform: scale(1.2);*/
+/*    !* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) *!*/
+/*}*/
 
 
 /** MODAL */
 
-#modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: black;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Black w/ opacity */
-}
+/*#modal {*/
+/*    display: none;*/
+/*    !* Hidden by default *!*/
+/*    position: fixed;*/
+/*    !* Stay in place *!*/
+/*    z-index: 1;*/
+/*    !* Sit on top *!*/
+/*    padding-top: 100px;*/
+/*    !* Location of the box *!*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    !* Full width *!*/
+/*    height: 100%;*/
+/*    !* Full height *!*/
+/*    overflow: auto;*/
+/*    !* Enable scroll if needed *!*/
+/*    background-color: black;*/
+/*    background-color: rgba(0, 0, 0, 0.7);*/
+/*    !* Black w/ opacity *!*/
+/*}*/
 
-.modal-content {
-    background-color: white;
-    position: fixed;
-    width: 600px;
-    height: 400px;
-    left: 50%;
-    top: 50%;
-    margin-left: -300px;
-    margin-top: -200px;
-    padding: 50px;
-    border-radius: 20px;
-}
+/*.modal-content {*/
+/*    background-color: white;*/
+/*    position: fixed;*/
+/*    width: 600px;*/
+/*    height: 400px;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    margin-left: -300px;*/
+/*    margin-top: -200px;*/
+/*    padding: 50px;*/
+/*    border-radius: 20px;*/
+/*}*/
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(1, [col-start] 1fr);
-    grid-gap: 20px;
-}
+/*.wrapper {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(1, [col-start] 1fr);*/
+/*    grid-gap: 20px;*/
+/*}*/
 
-@media only screen and (min-width: 414px) {
-    header {
-        background-color: yellow;
-    }
-    /* tablettes et ordinateurs */
-    .wrapper {
-        grid-template-columns: repeat(2, [col-start] 1fr);
-    }
-}
+/*@media only screen and (min-width: 414px) {*/
+/*    header {*/
+/*        background-color: yellow;*/
+/*    }*/
+/*    !* tablettes et ordinateurs *!*/
+/*    .wrapper {*/
+/*        grid-template-columns: repeat(2, [col-start] 1fr);*/
+/*    }*/
+/*}*/
 
-@media only screen and (min-width: 768px) {
-    header {
-        background-color: blue;
-    }
-    /* tablettes et ordinateurs */
-    .wrapper {
-        grid-template-columns: repeat(4, [col-start] 1fr);
-    }
-}
+/*@media only screen and (min-width: 768px) {*/
+/*    header {*/
+/*        background-color: blue;*/
+/*    }*/
+/*    !* tablettes et ordinateurs *!*/
+/*    .wrapper {*/
+/*        grid-template-columns: repeat(4, [col-start] 1fr);*/
+/*    }*/
+/*}*/
 
 
 /*
@@ -177,9 +178,9 @@ img:hover {
     }
 } */
 
-.close-button {
-    width: 100%;
-    display: inline-block;
-    text-align: right;
-    font-weight: bold;
-}
+/*.close-button {*/
+/*    width: 100%;*/
+/*    display: inline-block;*/
+/*    text-align: right;*/
+/*    font-weight: bold;*/
+/*}*/

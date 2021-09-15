@@ -14,9 +14,12 @@ body {
 
 header {
     /*background-color: #0d5e42;*/
+    position:page;
+    top:0;
 }
 
 main {
+    position: relative;
     /*background-color: indianred;*/
 }
 
@@ -65,12 +68,20 @@ fieldset{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    float: none;
 }
 
 #img-bandeau {
     display: none;
 }
 
+.big-connected{
+ display:none;
+}
+
+.small-connected{
+    display: block;
+}
 
 /***************** BOUTONS ************************/
 .btn {
@@ -114,6 +125,48 @@ fieldset{
     overflow:hidden;
 }
 
+.card-title{
+    color: #533f03;
+}
+.card {
+    margin: 5px;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    display: block;
+    background-color: #ba8b00;
+    border-radius: .50rem;
+}
+.img-card{
+    width: 100%;
+    text-align: center;
+    min-height: 140px;
+}
+.img-card > img {
+    height: auto;
+    width: 100%;
+}
+
+.card-body{
+    /*border: 1px solid;*/
+    padding: 2px 5px;
+    height: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    /*white-space: nowrap;*/
+
+    margin-bottom: 10px;
+}
+
+.card-more {
+    text-align: center;
+
+}
+.card-more > a{
+    color: navajowhite;
+}
+
 @media all and (min-width: 400px) {
 
     .bandeau {
@@ -125,16 +178,20 @@ fieldset{
     }
 
     #logo {
-        float: right;
-
-
+        float: left;
     }
 
     nav {
         /*position:relative;*/
         /*float: none;*/
     }
+    .big-connected{
+        display:block;
+    }
 
+    .small-connected{
+        display: none;
+    }
     #myCarousel {
         display: block;
     }
