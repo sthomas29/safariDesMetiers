@@ -35,6 +35,27 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    private $plainPassword;
+
+    /**
+     * @return string
+     */
+    public function getPlainPassword(): ?string
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param string $plainPassword
+     * @return User
+     */
+    public function setPlainPassword($plainPassword): User
+    {
+        $this->plainPassword = $plainPassword;
+        return $this;
+    }
+
+
     /**
      * @ORM\Column(type="string", length=255)
      */

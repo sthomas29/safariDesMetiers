@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+header {
+    background-color: beige;
+    margin-bottom: 10px;
+}
+
+.main img {
+    max-height: 200px;
+    width: 100%;
+}
+
+
+/* Center website */
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+header img {
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+
+
+/* Create three equal cartes that floats next to each other */
+
+.carte {
+    display: none;
+}
+
+
+/* Content */
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+
+/* The "show" class is added to the filtered elements */
+
+.show {
+    display: block;
+}
+
+
+/* Style the buttons */
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/* Add a grey background color on mouse-over */
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+
+/* Add a dark background color to the active button */
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+img:hover {
+    cursor: pointer;
+    border-radius: 50px;
+    transform: scale(1.2);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/** MODAL */
+
+#modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: white;
+    position: fixed;
+    width: 600px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, [col-start] 1fr);
+    grid-gap: 20px;
+}
+
+@media only screen and (min-width: 414px) {
+    header {
+        background-color: yellow;
+    }
+    /* tablettes et ordinateurs */
+    .wrapper {
+        grid-template-columns: repeat(2, [col-start] 1fr);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        background-color: blue;
+    }
+    /* tablettes et ordinateurs */
+    .wrapper {
+        grid-template-columns: repeat(4, [col-start] 1fr);
+    }
+}
+
+
+/*
+@media only screen and (max-width: 767px) {
+    header {
+        background-color: red;
+    }
+    /* smartphone en mode portrait */
+
+
+/*
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, [col-start] 1fr);
+    grid-gap: 20px;
+} */
+
+
+/* @media all and (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: repeat(3, [col-start] 1fr);
+    }
+} */
+
+.close-button {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+}

@@ -23,7 +23,8 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="{{ asset('assets/css/carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/styleStef.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/styleGreg.css') }}" />
 </head>
 <body>
 <header>
@@ -48,9 +49,13 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
+
+
+                {% if is_granted('ROLE_ADMIN') %}
                 <li class="nav-item">
                     <a class="nav-link" href="/admin">Admin</a>
                 </li>
+                {% endif %}
                 <li class="nav-item">
                     <a class="nav-link" href="/profil">Profil</a>
                 </li>
@@ -132,13 +137,10 @@
             </a>
         </div>
     {% endif %}
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
-        {% block content %} {% endblock %}
+        {% block content %}
+            {{ is_granted('ROLE_ADMIN') }}
+        {% endblock %}
     </div><!-- /.container -->
 
     <!-- FOOTER -->
