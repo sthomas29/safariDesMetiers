@@ -4,6 +4,10 @@
 
 }
 
+.navajowhite {
+    color: navajowhite;
+}
+
 body {
     top: 0;
     left: 0;
@@ -38,7 +42,6 @@ H1 {
     text-align: center;
     display: block;
 }
-
 /******************* STRUCTURE DE BASE **************************/
 
 
@@ -130,9 +133,9 @@ fieldset{
 }
 .card {
     margin: 5px;
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
+    width: 250px;
+    /*min-width: 200px;*/
+    /*max-width: 200px;*/
     display: block;
     background-color: #ba8b00;
     border-radius: .50rem;
@@ -152,7 +155,8 @@ fieldset{
     padding: 2px 5px;
     height: 100px;
     text-overflow: ellipsis;
-    overflow: hidden;
+
+    overflow: auto;
 
     /*white-space: nowrap;*/
 
@@ -165,6 +169,22 @@ fieldset{
 }
 .card-more > a{
     color: navajowhite;
+}
+.animal{
+    margin-top: 10px;
+}
+.photo{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.h2{
+    margin-bottom: 10px;
+}
+
+.carousel{
+    height: 150px;
+    width: 100%;
 }
 
 @media all and (min-width: 400px) {

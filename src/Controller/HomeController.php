@@ -25,8 +25,6 @@ class HomeController extends AbstractController
     {
         $animaux = $this->repo->findAll();
 
-
-
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'animaux' => $animaux,

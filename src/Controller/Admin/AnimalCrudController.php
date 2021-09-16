@@ -3,11 +3,13 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Animal;
+use App\Form\AnimalType;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Filter\EntityFilter;
@@ -25,15 +27,13 @@ class AnimalCrudController extends AbstractCrudController
             ->setEntityLabelInSingular('Animal')
             ->setEntityLabelInPlural('Animaux')
             ->setSearchFields(['nom', 'text', 'email'])
-            ->setDefaultSort(['nom' => 'DESC']);
-        ;
+            ->setDefaultSort(['nom' => 'DESC']);;
     }
 
     public function configureFilters(Filters $filters): Filters
     {
-            return $filters
-                    ->add(EntityFilter::new('famille'))
-            ;
+        return $filters
+            ->add(EntityFilter::new('famille'));
     }
 
 
@@ -46,11 +46,11 @@ class AnimalCrudController extends AbstractCrudController
 //
 //        ];
 
-        $choix = [  'User' => 'User' ,
+        $choix = ['User' => 'User',
             'Admin' => 'Admin',
             'SuperAdmin' => 'SuperAdmin'];
 
-       // dd($choix);
+        // dd($choix);
 
         yield TextField::new('nom');
         yield TextField::new('nomScientifique');
@@ -60,8 +60,7 @@ class AnimalCrudController extends AbstractCrudController
         yield AssociationField::new('regimeAlimentaire');
         yield TextareaField::new('description');
         yield TextField::new('lienWiki');
-//        yield ChoiceField::new('predateurs')->setChoices($choix)->allowMultipleChoices();
+        yield AssociationField::new('predateurs');
         //->autocomplete()
     }
-
 }

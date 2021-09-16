@@ -4,27 +4,28 @@
     {# {% block carrousel %}{% endblock %} #}
     {% block navBar %}{% endblock %}
     {% block content %}
-
-<!-- Three columns of text below the carousel -->
-<div class="row">
-    {% for animal in animaux %}
-        <div class="card col-sm-2 col-md-4">
-            <h5 class="card-title">{{ animal.nom }}</h5>
-            <div class="img-card">
-                <img class="card-img-top " src="{{ asset('assets/img/animaux/' ~ animal.photo) }}"
-                     alt="Card image cap">
-            </div>
-            <div class="card-body">
-                <p class="overflow-ellipsis">{{ animal.description }}</p>
-            </div><!-- /.col-lg-4 -->
-            <div class="card-more"><a class="btn-sm" href="{{ animal.lienWiki }}" role="button">Plus d'infos &raquo;</a></div>
-{#        //btn btn-secondary#}
+        <!-- Three columns of text below the carousel -->
+        <div class="text-center row justify-content-center">
+            {% for animal in animaux %}
+                <div class="card col-sm-2 col-md-4">
+                    <h5 class="card-title">{{ animal.nom }}</h5>
+                    <div class="img-card">
+                        <img class="card-img-top " src="{{ asset('assets/img/animaux/' ~ animal.photo) }}"
+                             alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <p class="overflow-ellipsis">{{ animal.description }}</p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="card-more"><a class="btn-sm" href="{{ path('animal')}}/{{ animal.nom }}"  role="button">Plus d'infos
+                            &raquo;</a></div>
+                    {# //btn btn-secondary #}
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-    <!-- /.row -->
+    {% endblock %}
 
-    <!-- START THE FEATURETTES -->
-    {# <hr class="featurette-divider"> #}
+<!-- START THE FEATURETTES -->
+{# <hr class="featurette-divider"> #}
 
     {# <div class="row featurette"> #}
     {# <div class="col-md-7"> #}
@@ -84,7 +85,7 @@
     {# </div> #}
 
     {# <hr class="featurette-divider"> #}
-    {% endblock %}
-    <!-- /END THE FEATURETTES -->
-    {% endblock %}
-</div>
+
+<!-- /END THE FEATURETTES -->
+
+{% endblock %}

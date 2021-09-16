@@ -18,18 +18,5 @@
     </style>
 
     {% block content %}
-        {# {{ form(form) }} #}
-        {% for animal in animaux %}
-
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ asset('assets/img/animaux/' ~ animal.photo) }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ animal.nom }}</h5>
-                    <p class="card-text twoLines">{{ animal.description }}</p>
-                    <a href="{{ animal.lienWiki }}" class="btn btn-primary">Plus d'infos...</a>
-                </div>
-            </div>
-
-        {% endfor %}
     {% endblock %}
 {% endblock %}
