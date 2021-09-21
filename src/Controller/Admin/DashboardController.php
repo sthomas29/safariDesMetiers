@@ -20,10 +20,10 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         //dd($this->isGranted('ROLE_ADMIN'));
-          // redirect to some CRUD controller
-          $routeBuilder = $this->get(AdminUrlGenerator::class);
+        // redirect to some CRUD controller
+        $routeBuilder = $this->get(AdminUrlGenerator::class);
 
-          return $this->redirect($this->get(AdminUrlGenerator::class)->setController(UserCrudController::class)->generateUrl());
+        //return $this->redirect($this->get(AdminUrlGenerator::class)->setController(UserCrudController::class)->generateUrl());
         // you can also redirect to different pages depending on the current user
         // if ('sthomas@campus-eni.fr' === $this->getUser()->getUserIdentifier()) {
         // return $this->redirect('app_login');
@@ -31,7 +31,7 @@ class DashboardController extends AbstractDashboardController
 
         // you can also render some template to display a proper Dashboard
         // (tip: it's easier if your template extends from @EasyAdmin/page/content.html.twig)
-        //return $this->render('admin/dashboard.html.twig');
+        return $this->render('admin/dashboard.html.twig');
 
         //return parent::index();
     }
