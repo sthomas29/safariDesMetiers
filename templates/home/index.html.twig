@@ -7,7 +7,7 @@
         <!-- Three columns of text below the carousel -->
         <div class="text-center row justify-content-center">
             {% for animal in animaux %}
-                <div class="card col-sm-2 col-md-4">
+                <div class="carte card col-sm-2 col-md-4 {{ animal.regimeAlimentaire }}">
                     <h5 class="card-title">{{ animal.nom }}</h5>
                     <div class="img-card">
                         <img class="card-img-top " src="{{ asset('assets/img/animaux/' ~ animal.photo) }}"

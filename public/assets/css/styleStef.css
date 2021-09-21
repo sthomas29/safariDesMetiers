@@ -150,6 +150,13 @@ fieldset{
     width: 100%;
 }
 
+.img-card:hover {
+
+    cursor: pointer;
+    border-radius: 50px;
+    transform: scale(1.2);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 .card-body{
     /*border: 1px solid;*/
     padding: 2px 5px;
