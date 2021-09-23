@@ -167,16 +167,16 @@
         {% endblock %}
     </div><!-- /.container -->
 
-    <!-- FOOTER -->
-    {% if block('footer') is defined %}
-        <footer class="container">
-            {#
-            <p class="float-right"><a href="#">Back to top</a></p>
-            #}
-            <p>&copy; 2020-2021 Company, Inc.
-        </footer>
-    {% endif %}
-</main>
+
+</main>    <!-- FOOTER -->
+{% if block('footer') is defined %}
+    <footer class="container-fluid">
+        {#
+        <p class="float-right"><a href="#">Back to top</a></p>
+        #}
+        <p id="footer">&copy; 2020-2021 <a href="https://safaridesmetiers.tech/edition-brest/" target="_blank"> Safari des Métiers Brest</a>, Inc.
+    </footer>
+{% endif %}
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 <script src="{{ asset('assets/js/javascript.js') }}"></script>
