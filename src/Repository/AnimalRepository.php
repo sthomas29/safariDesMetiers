@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Animal;
+use App\Entity\RegimeAlimentaire;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -47,4 +48,17 @@ class AnimalRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
+    public function getByRegime($regime = null)
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->join('a.regimeAlimentaire', 'r')
+            ->andWhere('r.nom = :val')
+            ->setParameter('val', $regime)
+            ->orderBy('a.nom', 'ASC');
+
+        $result = $qb->getQuery()->getResult();
+        return $result;
+    }
 }

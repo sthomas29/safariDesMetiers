@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Repository\AnimalRepository;
 use Doctrine\ORM\EntityManagerInterface;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -21,9 +23,16 @@ class HomeController extends AbstractController
     }
 
     #[Route('/safari', name: 'home')]
-    public function index(): Response
+    public function index(Request $request): Response
     {
-        $animaux = $this->repo->findAll();
+        $animaux = null;
+        $regime = $request->query->get('regime');
+
+        if ($regime) {
+            $animaux = $this->repo->getByRegime($regime);
+        } else {
+            $animaux = $this->repo->findAll();
+        }
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',

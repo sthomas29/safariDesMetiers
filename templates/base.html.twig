@@ -56,44 +56,42 @@
                         </li>
                     {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link" href="/profil">Tous</a>
+                        <a class="nav-link" href="{{ path('home') }}">Tous</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn nav-link" onclick="filtrer('carnivore')">Carnivores</a>
+                        <a class="nav-link" href="{{ path('home', {'regime':'Carnivore'}) }}">Carnivores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn nav-link" onclick="filtrer('herbivore')">Herbivores</a>
+                        <a class=" nav-link" href="{{ path('home', {'regime':'Herbivore'}) }}">Herbivores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn nav-link" onclick="filtrer('omnivore')">Omnivores</a>
+                        <a class="nav-link" href="{{ path('home', {'regime':'Omnivore'}) }}">Omnivores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn nav-link" href="/profil">Profil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn nav-link" href="/logout">Déconnexion</a>
+                        <a class="nav-link" href="/logout">Déconnexion</a>
                     </li>
                     <!--                <li class="nav-item">
                                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                    </li> -->
+                </li>
+                -->
                 </ul>
                 {% if app.user %}
                     <div class="big-connected">
-                        <small>Connecté : {{ app.user.prenom }} {{ app.user.nom }}
+                        <small>Connecté : <a class="nav-link text-white d-inline" href="/profil">{{ app.user.prenom }} {{ app.user.nom }}</a>
                             ({{ app.user.roles[0]=='ROLE_ADMIN'?'Admin':'' }})</small>
                     </div>
                 {% endif %}
 
-                {#  <form class="form-inline mt-2 mt-md-0">#}
-                    {# <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> #}
-                    {# <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> #}
-                    {# </form> #}
+                {# <form class="form-inline mt-2 mt-md-0"> #}
+                {# <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> #}
+                {# <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> #}
+                {# </form> #}
             </div>
         </nav>
         {% if app.user %}
             <div class="small-connected">
                 <small>Connecté : {{ app.user.prenom }} {{ app.user.nom }}
-                ({{ app.user.roles[0]=='ROLE_ADMIN'?'Admin':'' }})</small>
+                    ({{ app.user.roles[0]=='ROLE_ADMIN'?'Admin':'' }})</small>
             </div>
         {% endif %}
     {% endif %}
@@ -170,11 +168,12 @@
 
 </main>    <!-- FOOTER -->
 {% if block('footer') is defined %}
-    <footer class="container-fluid">
+    <footer class="container">
         {#
         <p class="float-right"><a href="#">Back to top</a></p>
         #}
-        <p id="footer">&copy; 2020-2021 <a href="https://safaridesmetiers.tech/edition-brest/" target="_blank"> Safari des Métiers Brest</a>, Inc.
+        <p id="footer">&copy; 2020-2021 <a href="https://safaridesmetiers.tech/edition-brest/" target="_blank"> Safari
+                des Métiers Brest</a>, Inc.
     </footer>
 {% endif %}
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

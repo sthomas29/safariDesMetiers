@@ -7,25 +7,38 @@
         <!-- Three columns of text below the carousel -->
         <div class="text-center row justify-content-center">
             {% for animal in animaux %}
-                <div class="carte card col-sm-2 col-md-4 {{ animal.regimeAlimentaire }}">
+                <div class="carte card col-sm-4  {{ animal.regimeAlimentaire }}">
                     <h5 class="card-title">{{ animal.nom }}</h5>
                     <div class="img-card">
                         <img class="card-img-top " src="{{ asset('assets/img/animaux/' ~ animal.photo) }}"
-                             alt="Card image cap">
+                             alt="Card image cap"
+                             onclick="openModal(['{{ animal.nom }}',
+                                     '{{ animal.nomScientifique }}',
+                                     '{{ animal.lieuDeVie }}',
+                                     '{{ animal.famille }}',
+                                     '{{ animal.regimeAlimentaire }}'])">
                     </div>
                     <div class="card-body">
                         <p class="overflow-ellipsis">{{ animal.description }}</p>
                     </div><!-- /.col-lg-4 -->
-                    <div class="card-more"><a class="btn-sm" href="{{ path('animal')}}/{{ animal.nom }}"  role="button">Plus d'infos
+                    <div class="card-more"><a class="btn-sm" href="{{ path('animal') }}/{{ animal.nom }}" role="button">Plus
+                            d'infos
                             &raquo;</a></div>
                     {# //btn btn-secondary #}
                 </div>
             {% endfor %}
         </div>
+        <div id="modal">
+            <div class="modal-content">
+                <div class="closeBtnContainer"><img src='{{ asset('assets/img/close.png') }}' class="close-button" onclick="closeModal()"></div>
+                <div id="content-modal">
+                </div>
+            </div>
+        </div>
     {% endblock %}
 
-<!-- START THE FEATURETTES -->
-{# <hr class="featurette-divider"> #}
+    <!-- START THE FEATURETTES -->
+    {# <hr class="featurette-divider"> #}
 
     {# <div class="row featurette"> #}
     {# <div class="col-md-7"> #}
@@ -86,7 +99,7 @@
 
     {# <hr class="featurette-divider"> #}
 
-<!-- /END THE FEATURETTES -->
+    <!-- /END THE FEATURETTES -->
     {% block footer %}{% endblock %}
 {% endblock %}
 

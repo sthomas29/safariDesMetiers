@@ -141,16 +141,22 @@ fieldset{
 }
 
 .card-title{
-    color: #533f03;
+    color: white;
 }
 .card {
     margin: 5px;
-    width: 250px;
+    width: 200px;
     /*min-width: 200px;*/
     /*max-width: 200px;*/
     display: block;
     background-color: #ba8b00;
     border-radius: .50rem;
+}
+
+.card:hover{
+    background-color: #0b2e13;
+    color: white;
+
 }
 .img-card{
     width: 100%;
@@ -159,6 +165,7 @@ fieldset{
 }
 .img-card > img {
     height: auto;
+    height: 250px;
     width: 100%;
 }
 
@@ -172,7 +179,7 @@ fieldset{
 .card-body{
     /*border: 1px solid;*/
     padding: 2px 5px;
-    height: 100px;
+    height: 150px;
     text-overflow: ellipsis;
 
     overflow: auto;
