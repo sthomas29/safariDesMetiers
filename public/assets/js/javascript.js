@@ -10,12 +10,9 @@ function filtrer(caracteristique) {
     var cartes, i;
     cartes = document.getElementsByClassName("carte");
 
-    console.log(cartes);
-    console.log(caracteristique);
-
     // itération sur les cartes
     for (i = 0; i < cartes.length; i++) {
-        console.log('ici');
+
         //cartes.forEach.call(carte => console.log(carte.className));
         if (cartes[i].classList.contains(caracteristique)){
             ajouterClasse(cartes[i], "show");
@@ -29,31 +26,31 @@ function filtrer(caracteristique) {
     }
 }
 
-/**
- * Ajoute la classe 'nom' a l'élément 'element' si celle-ci n'est pas présente
- */
-function ajouterClasse(element, nom) {
-    var i, classes
-    classes = element.className.split(" ");
-    if (classes.indexOf(nom) == -1) {
-        element.className += " " + nom;
-    }
-}
-
-/**
- * Supprime la classe 'nom' de l'élément 'element' si celle-ci est présente
- */
-function supprimerClasse(element, nom) {
-    var i, arr1;
-    arr1 = element.className.split(" ");
-    while (arr1.indexOf(nom) > -1) {
-        arr1.splice(arr1.indexOf(nom), 1);
-    }
-    element.className = arr1.join(" ");
-}
+// /**
+//  * Ajoute la classe 'nom' a l'élément 'element' si celle-ci n'est pas présente
+//  */
+// function ajouterClasse(element, nom) {
+//     var i, classes
+//     classes = element.className.split(" ");
+//     if (classes.indexOf(nom) == -1) {
+//         element.className += " " + nom;
+//     }
+// }
+//
+// /**
+//  * Supprime la classe 'nom' de l'élément 'element' si celle-ci est présente
+//  */
+// function supprimerClasse(element, nom) {
+//     var i, arr1;
+//     arr1 = element.className.split(" ");
+//     while (arr1.indexOf(nom) > -1) {
+//         arr1.splice(arr1.indexOf(nom), 1);
+//     }
+//     element.className = arr1.join(" ");
+// }
 
 // Ajout de la classe 'active' au bouton sélectionné
-var menu = document.getElementById("menu");
+//var menu = document.getElementById("menu");
 
 // var btns = menu.getElementsByClassName("btn");
 // for (var i = 0; i < btns.length; i++) {
@@ -64,27 +61,25 @@ var menu = document.getElementById("menu");
 // 	});
 // }
 
-filtrer("");
+//filtrer("");
 
 
 /*************
  * MODALE
  *
  *************/
+// document.getElementById("modale").style.display="none";
 
 function openModal(animalTab) {
-
-   //animaux.forEach(objet => console.log(objet))
-
     console.log(animalTab);
 
     createModal(animalTab);
-    var modal = document.getElementById("modal");
+    var modal = document.getElementById("modale");
     modal.style.display = "block";
 }
 
 function closeModal() {
-    var modal = document.getElementById("modal");
+    var modal = document.getElementById("modale");
     modal.style.display = "none";
 }
 
@@ -97,14 +92,20 @@ window.onclick = function (event) {
 
 function createModal(animal) {
     // animal = getDetails(nomAnimal);
-    var element = document.getElementById("content-modal");
-    element.innerHTML = "<h2>" + animal[0] + "</h2>" +
+
+    var modale = document.getElementById("modale");
+    var modaleContent = document.getElementById("content-modal");
+
+    modaleContent.innerHTML = "<h2>" + animal[0] + "</h2>" +
         "<ul>" +
         "<li>Nom scientifique : " + animal[1] + "</li>" +
         "<li>Lieu de vie : " + animal[2] + "</li>" +
         "<li>Famille : " + animal[3] + "</li>" +
         "<li>Régime alimentaire : " + animal[4] + "</li>" +
         "</ul>";
+    modale.style.display="block";
+    modaleContent.style.display="block";
+    console.log(modaleContent);
 }
 
 // Recherche des details de l animal en fonction de son nom

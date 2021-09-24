@@ -28,13 +28,13 @@
                 </div>
             {% endfor %}
         </div>
-        <div id="modal">
-            <div class="modal-content">
-                <div class="closeBtnContainer"><img src='{{ asset('assets/img/close.png') }}' class="close-button" onclick="closeModal()"></div>
-                <div id="content-modal">
-                </div>
-            </div>
+
+        <div id="modale" class="modal-content">
+            <div class="closeBtnContainer">
+                <img src='{{ asset('assets/img/close.png') }}' class="close-button" onclick="closeModal()"></div>
+            <div id="content-modal"></div>
         </div>
+
     {% endblock %}
 
     <!-- START THE FEATURETTES -->
