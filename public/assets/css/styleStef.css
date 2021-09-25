@@ -12,20 +12,45 @@ body {
     top: 0;
     left: 0;
 
-    padding-top: 0px;
+    padding-top: 0;
     background-color: #856404;
 }
 
 header {
     /*background-color: #0d5e42;*/
-    position:page;
+    /*position:page;*/
+    position: fixed;
     top:0;
+    z-index: 1;
 }
 
 main {
-    position: relative;
+    /*position: relative;*/
+    position :absolute;
     /*background-color: indianred;*/
 }
+/* Center website */
+
+/*.main {*/
+/*    max-width: 1000px;*/
+/*    margin: auto;*/
+/*}*/
+
+/*h1 {*/
+/*    font-size: 50px;*/
+/*}*/
+
+/*header img {*/
+/*    width: 300px;*/
+/*    margin: auto;*/
+/*    display: block;*/
+/*}*/
+
+.main img {
+    max-height: 200px;
+    width: 100%;
+}
+
 
 footer {
     display: inline;
@@ -54,11 +79,29 @@ H1 {
     text-align: center;
     display: block;
 }
+
+
+.animal{
+    margin-top: 10px;
+}
+.photo{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.h2{
+    margin-bottom: 10px;
+}
+
+.carousel{
+    height: 150px;
+    width: 100%;
+}
 /******************* STRUCTURE DE BASE **************************/
 
 
 /******************* FORMULAIRES ********************************/
-loginForm {
+#loginForm {
     padding-top: 1rem;
     margin-top: 30px;
     background-color: #0f6674;
@@ -164,18 +207,19 @@ fieldset{
     min-height: 140px;
 }
 .img-card > img {
-    height: auto;
+    /*height: auto;*/
     height: 250px;
     width: 100%;
 }
 
 .img-card:hover {
-
     cursor: pointer;
     border-radius: 50px;
-    transform: scale(1.2);
+    transform: scale(0.8);
     /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
+
 .card-body{
     /*border: 1px solid;*/
     padding: 2px 5px;
@@ -196,22 +240,52 @@ fieldset{
 .card-more > a{
     color: navajowhite;
 }
-.animal{
-    margin-top: 10px;
-}
-.photo{
-    display: block;
-    height: auto;
-    width: 100%;
-}
-.h2{
-    margin-bottom: 10px;
+
+/** MODAL */
+
+#modale {
+    display: none; /* Hidden by default */
+    position:fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /*padding-top: 50px; !* Location of the box *!*/
+    top: 200px; right:0; bottom:0; left: 0;
+
+    width: 400px; /* Full width */
+    height: 300px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    margin : 0 auto;
+    vertical-align: center;
 }
 
-.carousel{
-    height: 150px;
-    width: 100%;
+.modal-content {
+    background-color: darkslategrey;
+    position: fixed;
+    width: 50px;
+    height: 200px;
+    left: 50%;
+    top: 20%;
+    margin: auto;
+
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: -200px;
+    margin-left: 50px;
+    margin-top: -50px;
 }
+
+.closeBtnContainer {
+    float: right;
+}
+
+.close-button {
+    width: 5%;
+    display: inline-block;
+    float: right;
+    text-align: right;
+    font-weight: bold;
+}
+/** MODAL */
 
 @media all and (min-width: 400px) {
 

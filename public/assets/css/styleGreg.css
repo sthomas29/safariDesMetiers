@@ -12,28 +12,10 @@ body {
 /*    margin-bottom: 10px;*/
 /*}*/
 
-.main img {
-    max-height: 200px;
-    width: 100%;
-}
 
 
-/* Center website */
 
-.main {
-    max-width: 1000px;
-    margin: auto;
-}
 
-h1 {
-    font-size: 50px;
-}
-
-header img {
-    width: 300px;
-    margin: auto;
-    display: block;
-}
 
 /* Create three equal cartes that floats next to each other */
 
@@ -77,57 +59,11 @@ header img {
 /*    color: white;*/
 /*}*/
 
-img:hover {
-    cursor: pointer;
-    border-radius: 50px;
-    transform: scale(0.8);
-    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
 
-/** MODAL */
 
-#modale {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 50%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: black;
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-margin : 0 auto;
-}
 
-.modal-content {
-    background-color: darkslategrey;
-    position: fixed;
-    width: 50px;
-    height: 300px;
-    left: 50%;
-    top: 50%;
-/*margin-bottom: -200px;*/
-    margin: auto;
-    /*margin-left: 50px;*/
-    /*margin-top: -50px;*/
-    padding: 50px;
-    border-radius: 20px;
 
-}
 
-.closeBtnContainer {
-    float: right;
-}
-
-.close-button {
-    width: 5%;
-    display: inline-block;
-    float: right;
-    text-align: right;
-    font-weight: bold;
-}
 
 /*.wrapper {*/
 /*    display: grid;*/
