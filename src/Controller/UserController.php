@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
-    #[Route('/inscription', name: 'user')]
+    #[Route('/inscription', name: 'userInscription')]
     public function inscription(Request $request, UserPasswordHasherInterface $passwordEncoder): Response
     {
         $user = new User();
@@ -36,13 +36,10 @@ class UserController extends AbstractController
         ]);
     }
 
-    #[Route('/profil', name:'profil-Home')]
+    #[Route('/profil', name:'profil')]
     public function profile(){
-
-
         return $this->render('user/profil/index.html.twig', [
             'controller_name' => 'UserController',
-
         ]);
     }
 }

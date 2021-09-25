@@ -27,7 +27,7 @@ class AnimalCrudController extends AbstractCrudController
             ->setEntityLabelInSingular('Animal')
             ->setEntityLabelInPlural('Animaux')
             ->setSearchFields(['nom', 'text', 'email'])
-            ->setDefaultSort(['nom' => 'DESC']);;
+            ->setDefaultSort(['nom' => 'DESC']);
     }
 
     public function configureFilters(Filters $filters): Filters

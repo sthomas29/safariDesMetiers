@@ -18,7 +18,6 @@ class UserType extends AbstractType
             ->add('nom')
             ->add('prenom')
             ->add('Valider', SubmitType::class);
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
