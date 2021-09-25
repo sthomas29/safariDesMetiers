@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}SdM2021 @Brest - {{ titre }}{% endblock %}
 {% block body %}
     {# {% block carrousel %}{% endblock %} #}
     {% block navBar %}{% endblock %}
@@ -31,7 +31,7 @@
 
         <div id="modale" class="modal-content">
             <div class="closeBtnContainer">
-                <img src='{{ asset('assets/img/close.png') }}' class="close-button" onclick="closeModal()"></div>
+                <img src='{{ asset('assets/img/close.png') }}' class="close-button" onclick="closeModal()" alt="Close"></div>
             <div id="content-modal"></div>
         </div>
 

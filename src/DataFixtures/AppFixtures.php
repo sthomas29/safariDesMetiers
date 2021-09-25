@@ -101,15 +101,4 @@ class AppFixtures extends Fixture
             $objectManager->flush();
         }
     }
-
 }
-
-
-
-
-// create 20 products! Bam!
-//        for ($i = 0; $i < 20; $i++) {
-//            $product = new Product();
-//            $product->setName('product ' . $i);
-//            $product->setPrice(mt_rand(10, 100));
-//            $manager->persist($product);

@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\Animal;
 use App\Entity\User;
 use App\Form\AnimalType;
-use App\Form\RegisterType;
 use App\Repository\AnimalRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,13 +26,9 @@ class AnimalController extends AbstractController
     #[Route('/animal', name: 'animal')]
     public function index(): Response
     {
-
-        $animaux = $this->repo->findAll();
-
-        dump($animaux);
         return $this->render('animal/index.html.twig', [
             'controller_name' => 'AnimalController',
-            'animaux' => $animaux,
+            'titre' => 'Les Animaux'
         ]);
     }
 
@@ -51,13 +46,17 @@ class AnimalController extends AbstractController
     #[Route('animal/{nom}', name: ('showAnimal'))]
     public function showAnimal(Request $request, $nom): Response
     {
-        $animal = $this->repo->findBy(['nom' => $nom]);
+        $animal = $this->repo->findOneBy(['nom' => $nom]);
 
-        dump($animal[0]);
+
+        $predateurs = $this->repo->getPredateurs($animal);
+        dump($predateurs);
 
         return $this->render('animal/show.html.twig', [
             'controller_name' => 'AnimalController',
-            'animal' => $animal[0],
+            'animal' => $animal,
+            'predateurs' => $predateurs,
+            'titre' => $animal->getNom(),
         ]);
     }
 }

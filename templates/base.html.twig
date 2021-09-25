@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>{% block title %}Le Safari Brestois {% endblock %}</title>
+    <title>{% block title %}SdM2021 @Brest{% endblock %}</title>
 
     {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
@@ -52,7 +52,7 @@
 
                     {% if is_granted('ROLE_ADMIN') %}
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin">Admin</a>
+                            <a class="nav-link" href="{{ path('admin') }}">Admin</a>
                         </li>
                     {% endif %}
                     <li class="nav-item">
@@ -68,7 +68,7 @@
                         <a class="nav-link" href="{{ path('home', {'regime':'Omnivore'}) }}">Omnivores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Déconnexion</a>
+                        <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
                     </li>
                     <!--                <li class="nav-item">
                                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -77,8 +77,12 @@
                 </ul>
                 {% if app.user %}
                     <div class="big-connected">
-                        <small>Connecté : <a class="nav-link text-white d-inline" href="/profil">{{ app.user.prenom }} {{ app.user.nom }}</a>
-                            ({{ app.user.roles[0]=='ROLE_ADMIN'?'Admin':'' }})</small>
+                        <small>Connecté : <a class="nav-link text-white d-inline"
+                                             href="{{ path('profil') }}">{{ app.user.prenom }} {{ app.user.nom }}</a>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                ({{ app.user.roles[0]=='ROLE_ADMIN'?'Admin':'' }})
+                            {% endif %}
+                        </small>
                     </div>
                 {% endif %}
 

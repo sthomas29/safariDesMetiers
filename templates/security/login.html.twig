@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}SdM2021 @Brest - {{ titre }}{% endblock %}
 
 {% block body %}
     {% block content %}
@@ -41,7 +41,7 @@
             </div>
             <div id="btnGroup">
                 <button class="btn btn-sm " type="submit">Se connecter</button>
-                <a href="/inscription" class="btn btn-sm ">Inscription</a>
+                <a href="{{ path('userInscription') }}" class="btn btn-sm ">Inscription</a>
             </div>
             </fieldset>
         </form>

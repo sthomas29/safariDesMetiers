@@ -61,4 +61,17 @@ class AnimalRepository extends ServiceEntityRepository
         $result = $qb->getQuery()->getResult();
         return $result;
     }
+
+    public function getPredateurs($animal)
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->addSelect('a.predateurs')
+            ->join('a.predateurs', 'p')
+            ->andWhere('a.id = :id')
+            ->setParameter('id', $animal)
+            ->orderBy('a.nom', 'ASC');
+
+        $result = $qb->getQuery()->getResult();
+        return $result;
+    }
 }
