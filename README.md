@@ -1,5 +1,5 @@
 # safariDesMetiers
-Symfony site for event "Safari des Métiers 2021" in Brest (28/09)  
+Symfony site for event **"Safari des Métiers 2021"** in Brest (28/09)  
 
 Developped with Symfony v5.3 / php 8.0 by Gregori TIRSATINE and Stéphane THOMAS  
 
