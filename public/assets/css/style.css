@@ -330,9 +330,7 @@ fieldset{
 /** MODAL */
 
 @media all and (min-width: 414px) {
-    header {
-        background-color: yellow;
-    }
+
     /* tablettes et ordinateurs */
     .wrapper {
         grid-template-columns: repeat(2, [col-start] 1fr);

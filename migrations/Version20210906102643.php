@@ -32,6 +32,8 @@ final class Version20210906102643 extends AbstractMigration
         $this->addSql('ALTER TABLE animal_animal ADD CONSTRAINT FK_D05AE6C3E57BBAAF FOREIGN KEY (animal_source) REFERENCES animal (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE animal_animal ADD CONSTRAINT FK_D05AE6C3FC9EEA20 FOREIGN KEY (animal_target) REFERENCES animal (id) ON DELETE CASCADE');
 
+        $this->addSql('ALTER TABLE animal ADD description LONGTEXT DEFAULT NULL, ADD lien_wiki VARCHAR(255) DEFAULT NULL');
+
         $this->addSql('ALTER TABLE user AUTO_INCREMENT = 1');
         $this->addSql('ALTER TABLE animal AUTO_INCREMENT = 1');
         $this->addSql('ALTER TABLE famille AUTO_INCREMENT = 1');

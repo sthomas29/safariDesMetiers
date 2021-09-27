@@ -41,7 +41,7 @@ class AppFixtures extends Fixture
             $user->setNom($users[$i]['nom']);
             $user->setPrenom($users[$i]['prenom']);
             $objectManager->persist($user);
-            $objectManager->flush();
+//            $objectManager->flush();
         }
     }
 
@@ -53,7 +53,7 @@ class AppFixtures extends Fixture
             $famille = new Famille();
             $famille->setNom($familles[$i]);
             $objectManager->persist($famille);
-            $objectManager->flush();
+           $objectManager->flush();
         }
     }
 
