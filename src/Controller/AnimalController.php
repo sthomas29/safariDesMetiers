@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Animal;
-use App\Entity\User;
 use App\Form\AnimalType;
 use App\Repository\AnimalRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -49,13 +48,13 @@ class AnimalController extends AbstractController
         $animal = $this->repo->findOneBy(['nom' => $nom]);
 
 
-        $predateurs = $this->repo->getPredateurs($animal);
-        dump($predateurs);
+        //$predateurs = $this->repo->getPredateurs($animal);
+        // dump($predateurs);
 
         return $this->render('animal/show.html.twig', [
             'controller_name' => 'AnimalController',
             'animal' => $animal,
-            'predateurs' => $predateurs,
+            //'predateurs' => $predateurs,
             'titre' => $animal->getNom(),
         ]);
     }

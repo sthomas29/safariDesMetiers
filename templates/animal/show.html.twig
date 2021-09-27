@@ -1,6 +1,5 @@
 {% extends 'base.html.twig' %}
 {% block title %}SdM2021 @Brest - {{ titre }}{% endblock %}
-{% block title %}Hello AnimalController!{% endblock %}
 
 {% block body %}
 {#    <style>#}
@@ -16,18 +15,18 @@
 {#            padding: 2px 6px;#}
 {#        }#}
 {#    </style>#}
-
+    {% block navBar %}{% endblock %}
     {% block content %}
         {# {{ form(form) }} #}
 
         {# {{ form(form) }} #}
         <div class="container ">
             <div class="row animal">
-                <div class="col-sm-6">
+                <div class="col-12 col-sm-4">
                     <img class="photo " src="{{ asset('assets/img/animaux/' ~ animal.photo) }}"
                          alt="La photo : {{ animal.nom }}">
                 </div>
-                <div class="col-sm-6">
+                <div class="col-12 col-sm-4">
                     <div class="mb-4"><span class="h2">{{ animal.nom }}</span> <span
                                 class="font-italic">({{ animal.nomScientifique }})</span></div>
                     <div class="mb-4">

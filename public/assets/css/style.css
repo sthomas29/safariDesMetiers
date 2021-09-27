@@ -174,16 +174,21 @@ fieldset{
 }
 
 /*****************   CARDS  ***********************/
-.twoLines .card-text{
+.twoLines .card-text {
     background-color: #0d5e42;
-    height:30px;
-    line-height:15px;
-    overflow:hidden;
+    height: 30px;
+    line-height: 15px;
+    overflow: hidden;
 }
 
-.card-title{
+.card-title {
     color: white;
 }
+
+.carte {
+    width: 100%;
+}
+
 .card {
     margin: 5px;
     width: 200px;
@@ -218,10 +223,10 @@ fieldset{
 }
 
 
-.card-body{
+.card-body {
     /*border: 1px solid;*/
     padding: 2px 5px;
-    height: 150px;
+    height: 100px;
     text-overflow: ellipsis;
 
     overflow: auto;

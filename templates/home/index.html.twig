@@ -19,11 +19,20 @@
                                      '{{ animal.regimeAlimentaire }}'])">
                     </div>
                     <div class="card-body">
-                        <p class="overflow-ellipsis">{{ animal.description }}</p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="card-more"><a class="btn-sm" href="{{ path('animal') }}/{{ animal.nom }}" role="button">Plus
-                            d'infos
-                            &raquo;</a></div>
+                        {# <p class="overflow-ellipsis"> #}
+                        <div class="text-left">
+                            <span class="mb-4 font-weight-bold"> Régime alimentaire : </span>
+                            <span>{{ animal.regimeAlimentaire }}</span>
+                        </div>
+                        <div class="text-left mb-4">
+                            <span class="mb-4 font-weight-bold">Lieu de vie : </span>
+                            <span>{{ animal.lieuDeVie }}</span>
+                        </div>
+                    </div>
+                    <div class="card-more mb-4">
+                        <a class="btn btn-dark btn-sm" href="{{ path('animal') }}/{{ animal.nom }}" role="button">
+                            Plus d'infos >>></a>
+                    </div>
                     {# //btn btn-secondary #}
                 </div>
             {% endfor %}
@@ -31,7 +40,8 @@
 
         <div id="modale" class="modal-content">
             <div class="closeBtnContainer">
-                <img src='{{ asset('assets/img/close-white.png') }}' class="close-button" onclick="closeModal()" alt="Close"></div>
+                <img src='{{ asset('assets/img/close-white.png') }}' class="close-button" onclick="closeModal()"
+                     alt="Close"></div>
             <div id="content-modal"></div>
         </div>
 
