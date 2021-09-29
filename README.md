@@ -16,7 +16,7 @@ To install, you just have to follow instructions below :
 - npm install                                 //****** to install JS tools for webpack Encore  
 - symfony console doctrine:database:create    //****** to create database safaridb  
 
-  ==> You need to create a new user in mysql then give all permission on safaridb  
+  ==> You need to create a new user in mysql then give all permissions on safaridb  
   ==> Then configure it in .env file : DATABASE_URL="mysql://safari-user:safari@127.0.0.1:3306/safaridb"
   ==> You can skip this stage by using root user with blank password.  
   
@@ -30,3 +30,5 @@ You can now launch server :
 
 Admin login : admin/admin
 USer login : user/user
+
+Don't hesitate to send me a message on sthomas@campus-eni.fr for any troubleshoot ! ;-)
